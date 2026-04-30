@@ -7,13 +7,14 @@
 body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
+  text-align: center;
 
-  /* 🔥 柔和火焰背景 */
-  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #7c2d12, #ea580c);
+  /* 🪿 奶鵝黃主題背景 */
+  background: linear-gradient(-45deg, #fdf3c0, #fde68a, #fef9e7, #fbbf24);
   background-size: 400% 400%;
   animation: bgMove 10s ease infinite;
 
-  color: #fff;
+  color: #78530a;
 }
 
 /* 背景動畫 */
@@ -27,6 +28,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 section {
@@ -40,38 +42,61 @@ section {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero__name {
   font-size: 3rem;
+  color: #92400e;
 }
 
 .hero__tagline {
-  color: #ffe4c7;
+  color: #b45309;
   margin: 10px 0 20px;
+  font-size: 1.2rem;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
 }
 
 /* Buttons */
 .btn {
-  padding: 10px 20px;
+  padding: 10px 24px;
   border-radius: 999px;
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  transition: opacity 0.2s;
 }
 
+.btn:hover { opacity: 0.85; }
+
 .btn--primary {
-  background: #ff6b00;
-  color: white;
+  background: #d97706;
+  color: #fff;
 }
 
 .btn--secondary {
-  border: 1px solid #ff6b00;
-  color: #ff6b00;
+  border: 2px solid #d97706;
+  color: #92400e;
+}
+
+/* Section titles */
+.section__title {
+  font-size: 2rem;
+  color: #92400e;
+  margin-bottom: 20px;
 }
 
 /* About */
 .about__text {
-  color: #fce7c7;
+  color: #78530a;
   max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
 }
 
 /* Contact */
@@ -82,43 +107,26 @@ section {
 
 .contact__list li {
   margin-bottom: 8px;
+  color: #92400e;
 }
 
-/* 留言板 */
-.message-board {
-  margin-top: 25px;
-  background: rgba(0,0,0,0.3);
-  padding: 20px;
-  border-radius: 12px;
+/* 🦕 恐龍裝飾 */
+.dino-strip {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  padding: 20px 0 0;
+  flex-wrap: wrap;
 }
 
-.message-board input,
-.message-board textarea {
-  width: 100%;
-  margin: 6px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
+.dino-strip svg {
+  filter: drop-shadow(0 4px 6px rgba(180, 83, 9, 0.15));
+  transition: transform 0.3s ease;
 }
 
-.message-board button {
-  padding: 10px 15px;
-  background: #ff6b00;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#messages {
-  margin-top: 10px;
-}
-
-.message {
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-  margin-top: 8px;
-  border-radius: 8px;
+.dino-strip svg:hover {
+  transform: translateY(-8px) rotate(-5deg);
 }
 
 /* 🌫️ 背景漂浮層 */
@@ -137,7 +145,7 @@ section {
 .float-text {
   position: absolute;
   font-size: 24px;
-  color: rgba(255,255,255,0.08);
+  color: rgba(180, 83, 9, 0.12);
   animation: floatMove 8s linear forwards;
   white-space: nowrap;
 }
