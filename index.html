@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奶龍 | Personal Website</title>
+
+  <!-- 圓潤字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- 🌫️ 背景漂浮層 -->
+  <div id="bg-float-layer"></div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <h1 class="hero__name">Your Name</h1>
+      <p class="hero__tagline">
+        我是奶龍，我喜歡噴火
+      </p>
+
+      <div class="hero__buttons">
+        <a href="#about" class="btn btn--primary">View Work</a>
+        <a href="#contact" class="btn btn--secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section__title">About Me</h2>
+      <p class="about__text">
+        The one and only 奶龍。
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact + 留言板 -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section__title">Contact</h2>
+
+      <ul class="contact__list">
+        <li>Email: your@email.com</li>
+        <li>GitHub: github.com/yourname</li>
+        <li>LinkedIn: linkedin.com/in/yourname</li>
+      </ul>
+
+      <!-- 💬 留言板 -->
+      <div class="message-board">
+        <h3>留言板</h3>
+
+        <input type="text" id="name" placeholder="你的名字">
+        <textarea id="message" placeholder="寫下留言..."></textarea>
+        <button onclick="addMessage()">送出留言</button>
+
+        <div id="messages"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
