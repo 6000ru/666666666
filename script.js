@@ -8,37 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// 💬 留言功能 + 過濾
-function addMessage() {
-  const name = document.getElementById("name").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !message) return;
-
-  // 🚫 禁止「我是奶龍」
-  if (message.includes("我是奶龍")) {
-
-    const warnText = `${name}不是奶龍`;
-
-    alert(warnText);
-
-    createFloatingText(warnText);
-
-    return;
-  }
-
-  // 正常留言
-  const div = document.createElement("div");
-  div.classList.add("message");
-  div.innerHTML = `<strong>${name}</strong><br>${message}`;
-
-  document.getElementById("messages").appendChild(div);
-
-  document.getElementById("name").value = "";
-  document.getElementById("message").value = "";
-}
-
-
 // 🌫️ 背景漂浮字
 function createFloatingText(text) {
   const layer = document.getElementById("bg-float-layer");
